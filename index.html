@@ -1,0 +1,439 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Portfolio
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blinkTextCursor {
+            from {
+                border-right-color: rgba(255, 255, 255, 0.75);
+            }
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .slide-in {
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .pulse {
+            animation: pulse 1.5s infinite;
+        }
+
+        .typewriter h3 {
+            overflow: hidden;
+            border-right: .15em solid rgba(255, 255, 255, 0.75);
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: 
+                typewriter 4s steps(40, end),
+                blinkTextCursor 0.75s step-end infinite;
+        }
+
+        .project-card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-form input, .contact-form textarea {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none;
+            border-color: #4caf50;
+        }
+
+        .contact-form button {
+            background-color: #4caf50;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+
+        .background-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .background-animation canvas {
+            display: block;
+        }
+  </style>
+ </head>
+ <body class="bg-black text-white relative">
+  <header class="flex justify-between items-center p-6 fade-in">
+   <h1 class="text-2xl font-bold text-green-500">
+    SUBHASHREE BEHERA
+   </h1>
+   <nav>
+    <ul class="flex space-x-6">
+     <li>
+      <a class="text-green-500 cursor-pointer" href="#home">
+       HOME
+      </a>
+     </li>
+     <li>
+      <a class="cursor-pointer" href="#about">
+       ABOUT
+      </a>
+     </li>
+     <li>
+      <a class="cursor-pointer" href="#portfolio">
+       PORTFOLIO
+      </a>
+     </li>
+     <li>
+      <a class="cursor-pointer" href="#services">
+       SERVICES
+      </a>
+     </li>
+     <li>
+      <a class="cursor-pointer" href="#projects">
+       PROJECT
+      </a>
+     </li>
+     <li>
+      <a class="cursor-pointer" href="#contact">
+       CONTACT
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </header>
+  <div class="background-animation">
+   <canvas id="canvas">
+   </canvas>
+  </div>
+  <main class="flex flex-col items-center text-center mt-20 relative z-10 px-4" id="home">
+   <h2 class="text-4xl font-bold slide-in">
+    HI THERE,
+   </h2>
+   <div class="typewriter">
+    <h3 class="text-5xl font-bold mt-4">
+     I Am Subhashree Behera
+    </h3>
+   </div>
+   <p class="mt-4 text-lg slide-in">
+    I'm a Software Developer with extensive experience for over 1 years. My expertise is Full Stack Development, System Design and many more...
+   </p>
+   <button class="mt-6 px-6 py-2 bg-green-500 text-black font-bold rounded-full pulse">
+    Hire Me
+   </button>
+   <img alt="Cartoon character of a developer with a laptop" class="mt-10 slide-in" height="300" src="assets/image1.avif" width="300"/>
+  </main>
+  <section class="mt-20 text-center px-4" id="portfolio">
+   <h2 class="text-3xl font-bold slide-in">
+    MY
+    <span class="text-green-500">
+     PORTFOLIO
+    </span>
+   </h2>
+   <div class="flex flex-wrap justify-center space-x-4 mt-6">
+    <button class="px-4 py-2 bg-green-500 text-black font-bold rounded-full pulse">
+     ALL
+    </button>
+    <button class="px-4 py-2 border border-green-500 text-green-500 font-bold rounded-full">
+     WEB DEVELOPER
+    </button>
+    <button class="px-4 py-2 border border-green-500 text-green-500 font-bold rounded-full">
+     DEVELOPMENT
+    </button>
+    <button class="px-4 py-2 border border-green-500 text-green-500 font-bold rounded-full">
+     DESIGNS
+    </button>
+   </div>
+  </section>
+  <section class="mt-20 text-center px-4" id="services">
+   <h2 class="text-3xl font-bold slide-in">
+    MY
+    <span class="text-green-500">
+     SERVICES
+    </span>
+   </h2>
+   <div class="flex flex-wrap justify-center mt-10">
+    <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+     <div class="border border-green-500 p-6 rounded-lg project-card">
+      <i class="fas fa-code text-4xl text-green-500 mb-4">
+      </i>
+      <h3 class="text-xl font-bold mb-2">
+       Web Development
+      </h3>
+      <p>
+       Building responsive and high-quality web applications.
+      </p>
+     </div>
+    </div>
+    <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+     <div class="border border-green-500 p-6 rounded-lg project-card">
+      <i class="fas fa-paint-brush text-4xl text-green-500 mb-4">
+      </i>
+      <h3 class="text-xl font-bold mb-2">
+       Web Design
+      </h3>
+      <p>
+       Crafting visually appealing and user-friendly designs.
+      </p>
+     </div>
+    </div>
+    <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+     <div class="border border-green-500 p-6 rounded-lg project-card">
+      <i class="fas fa-pencil-ruler text-4xl text-green-500 mb-4">
+      </i>
+      <h3 class="text-xl font-bold mb-2">
+       UI/UX Design
+      </h3>
+      <p>
+       Creating intuitive and engaging user experiences.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="mt-20 text-center px-4" id="projects">
+   <h2 class="text-3xl font-bold slide-in">
+    MY
+    <span class="text-green-500">
+     PROJECTS
+    </span>
+   </h2>
+   <div class="flex flex-wrap justify-center mt-10">
+    <a class="w-full md:w-1/2 lg:w-1/3 p-4" href="#">
+     <div class="border border-green-500 p-6 rounded-lg project-card">
+      <img alt="Project 1 thumbnail" class="mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/4sMWIUC6NnEIiHxNlvLaGUAWVtRryUgUMq4Avko3M1s.jpg" width="300"/>
+      <h3 class="text-xl font-bold mb-2">
+       Project 1
+      </h3>
+      <p>
+       Description of Project 1.
+      </p>
+     </div>
+    </a>
+    <a class="w-full md:w-1/2 lg:w-1/3 p-4" href="#">
+     <div class="border border-green-500 p-6 rounded-lg project-card">
+      <img alt="Project 2 thumbnail" class="mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/bP-xqcLLqIV3faj1dG-PO5bhuLDS4NIUW-eLbRzrXnQ.jpg" width="300"/>
+      <h3 class="text-xl font-bold mb-2">
+       Project 2
+      </h3>
+      <p>
+       Description of Project 2.
+      </p>
+     </div>
+    </a>
+    <a class="w-full md:w-1/2 lg:w-1/3 p-4" href="#">
+     <div class="border border-green-500 p-6 rounded-lg project-card">
+      <img alt="Project 3 thumbnail" class="mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/aQ0HBya6XFrbwE4-1cxBWd_whRoTwdgB_qHgHVnhsKE.jpg" width="300"/>
+      <h3 class="text-xl font-bold mb-2">
+       Project 3
+      </h3>
+      <p>
+       Description of Project 3.
+      </p>
+     </div>
+    </a>
+   </div>
+  </section>
+  <section class="mt-20 text-center px-4" id="contact">
+   <h2 class="text-3xl font-bold slide-in">
+    CONTACT
+    <span class="text-green-500">
+     ME
+    </span>
+   </h2>
+   <div class="flex justify-center mt-10">
+    <form class="w-full md:w-2/3 lg:w-1/2 contact-form">
+     <div class="mb-4">
+      <input placeholder="Your Name" required="" type="text"/>
+     </div>
+     <div class="mb-4">
+      <input placeholder="Your Email" required="" type="email"/>
+     </div>
+     <div class="mb-4">
+      <textarea placeholder="Your Message" required="" rows="5">
+      </textarea>
+     </div>
+     <button class="px-6 py-2 bg-green-500 text-black font-bold rounded-full pulse" type="submit">
+      Send Message
+     </button>
+    </form>
+   </div>
+  </section>
+  <footer class="mt-20 text-center p-6 bg-gray-900">
+   <div class="flex justify-center space-x-6 mb-4">
+    <a class="text-green-500" href="#">
+     <i class="fab fa-facebook-f">
+     </i>
+    </a>
+    <a class="text-green-500" href="#">
+     <i class="fab fa-twitter">
+     </i>
+    </a>
+    <a class="text-green-500" href="#">
+     <i class="fab fa-linkedin-in">
+     </i>
+    </a>
+    <a class="text-green-500" href="#">
+     <i class="fab fa-github">
+     </i>
+    </a>
+   </div>
+   <p class="text-gray-500">
+    &copy; 2023 Subhashree Behera. All rights reserved.
+   </p>
+  </footer>
+  <script>
+   const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particlesArray = [];
+        const numberOfParticles = 100;
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 5 + 1;
+                this.speedX = Math.random() * 3 - 1.5;
+                this.speedY = Math.random() * 3 - 1.5;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.size > 0.2) this.size -= 0.1;
+                if (this.x > canvas.width || this.x < 0) {
+                    this.speedX = -this.speedX;
+                }
+                if (this.y > canvas.height || this.y < 0) {
+                    this.speedY = -this.speedY;
+                }
+            }
+            draw() {
+                ctx.fillStyle = 'rgba(0, 255, 0, 0.7)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.closePath();
+                ctx.fill();
+            }
+        }
+
+        function init() {
+            for (let i = 0; i < numberOfParticles; i++) {
+                particlesArray.push(new Particle());
+            }
+        }
+
+        function handleParticles() {
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+                particlesArray[i].draw();
+                if (particlesArray[i].size <= 0.3) {
+                    particlesArray.splice(i, 1);
+                    i--;
+                }
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            handleParticles();
+            requestAnimationFrame(animate);
+        }
+
+        init();
+        animate();
+
+        window.addEventListener('resize', function() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+  </script>
+ </body>
+</html>
